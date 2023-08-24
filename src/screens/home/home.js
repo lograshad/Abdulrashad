@@ -1,26 +1,23 @@
-import { useEffect, useState } from "react";
-import Preloader from "../../components/preloader/preloader";
-
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import BatLogo from "../../Gifs/batmanlogosky.gif";
+import "./home.css";
 const Home = () => {
-    const [killPreloader, setKillPreloader] = useState(false);
-
-    // temporary loader until image loading is implented
-    useEffect (() => {
-        setTimeout(() => {
-            setKillPreloader(true)
-        }, timeout);
-    }, [3000])
-    return ( 
-        <div>
-            {
-            killPreloader 
-            ? 
-            <div className="home-screen"></div>
-             : 
-             <Preloader/> 
-             }
+    return (
+        <div className="home-page">
+            <div className="my-name">Abdulrasheed Ìyàndá</div>
+                <div className="middle-content">
+                    <div className="logo-img-wrapper">
+                        <img
+                            src={BatLogo} alt="batman logo in sky" />
+                    </div>
+                    <div
+                        className="img-name">ra's al gul</div>
+                    <div
+                        className="date">2023</div>
+                </div>
         </div>
-     );
+    );
 }
- 
+
 export default Home;

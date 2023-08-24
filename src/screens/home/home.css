@@ -1,0 +1,55 @@
+.home-page {
+    /* position: relative; */
+    /* temporary stylings */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.home-page .primary-middle-content {
+    /* max-width: 50%;
+    max-height: 50%; */
+    /* position: absolute; */
+    /* top: 49.5%;
+    left: 49.95%; */
+    /* transform: translate(-50%, -50%); */
+}
+.home-page .middle-content {
+    max-width: 50%;
+    max-height: 50%;
+    scale: 0.8;
+    position: relative;
+}
+.home-page .logo-img-wrapper{
+    overflow: hidden;
+}
+.home-page .logo-img-wrapper img {
+    height: 100%;
+    width: 100%;
+    /* transform: scale(1.1); */
+}
+.home-page .my-name {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.home-page .img-name {
+    position: absolute;
+    left: 0;
+}
+.home-page .date {
+    position: absolute;
+    right: 0;
+}
+.home-page .img-name, .home-page .date {
+    text-transform: uppercase;
+    font-weight: 700;
+    bottom: -20%;
+    font-size: 10px;
+    visibility: hidden;
+}
