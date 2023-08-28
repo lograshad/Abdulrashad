@@ -8,7 +8,7 @@ function App() {
   const location = useLocation();
   return (
     <AnimatePresence 
-    // initial={false} for reloading the page
+    // initial={false}
      mode='wait'>
       <Routes location={location} key={location.pathname}>
         <Route

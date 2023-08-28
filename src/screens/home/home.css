@@ -8,14 +8,14 @@
     align-items: center;
     position: relative;
 }
-.home-page .primary-middle-content {
-    /* max-width: 50%;
-    max-height: 50%; */
-    /* position: absolute; */
-    /* top: 49.5%;
-    left: 49.95%; */
-    /* transform: translate(-50%, -50%); */
-}
+/* .home-page .primary-middle-content {
+    max-width: 50%;
+    max-height: 50%;
+    position: absolute;
+    top: 49.5%;
+    left: 49.95%;
+    transform: translate(-50%, -50%);
+} */
 .home-page .middle-content {
     max-width: 50%;
     max-height: 50%;
@@ -24,6 +24,7 @@
 }
 .home-page .logo-img-wrapper{
     overflow: hidden;
+    transform-origin: center;
 }
 .home-page .logo-img-wrapper img {
     height: 100%;
