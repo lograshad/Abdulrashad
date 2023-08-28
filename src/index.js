@@ -18,3 +18,12 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+// side notes
+// justice never sleeps
+// enter into the awesomeness of ra'as aghul
+
+// todos
+// lazy loading counter
+// 404 page
