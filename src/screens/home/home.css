@@ -1,16 +1,16 @@
 .home-page {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* height: 100vh;
+    width: 100vw; */
     position: relative;
+    cursor: none;
 }
 .home-page .middle-content {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 50vw;
+    max-height: 50vh;
     scale: 0.8;
-    /* top: 50; */
+    top: 45vh;
+    left: 45vw;
+    transform: translate(-50%, -50%);
     position: absolute;
 }
 .home-page .logo-img-wrapper{
@@ -23,11 +23,20 @@
 }
 .home-page .my-name {
     position: absolute;
-    top: -17.5vw;
+    top: 5vh;
     left: 10%;
     font-size: 10px;
     font-weight: 700;
-    opacity: 0;
+    opacity: 1;
+    text-transform: uppercase;
+}
+.home-page .year {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 .home-page .img-name {
@@ -45,32 +54,24 @@
     font-size: 10px;
     opacity: 0;
 }
-.normal-content {
-    display: none;
-}
+/* normal content */
 /* title styles */
-.title-stn {
+
+.home-page .title-stn {
     font-size: 10vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-transform: uppercase;
     color: var(--title-font-color);
-    margin-top: 35vh;
     font-weight: 700;
     font-family: var(--secondary-font);
     user-select: none;
+    padding-top: 20vh;
 }
 .line-1 {
     display: flex;
     align-items: center;
-}
-.line-1 span:nth-child(2) {
-    content: '';
-    background-color: var(--title-font-color);
-    width: 10rem;
-    height: 1.5vw;
-    margin: 0 1rem;
 }
 .lineChildren {
     transform: translate(0, 100%);
@@ -135,10 +136,14 @@
     padding: 0 3rem;
     padding-bottom: 20vh;
 }
-.body {
+.about-body {
     font-size: 5vw;
     font-family: var(--secondary-font);
     text-align: center;
     line-height: 1em;
     font-weight: 500;
+    opacity: 0;
+    padding: 0 3rem;
+    padding-bottom: 20vh;
+    transform: translateY(-20);
 }
