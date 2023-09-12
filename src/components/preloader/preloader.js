@@ -10,24 +10,25 @@ const Preloader = () => {
     return (
         <div className="preloader-screen">
             <div className="my-name">Abdulrasheed Ìyàndá</div>
+            <div className="year">2023 portfolio.</div>
             <div className="middle-content">
-                <div className="logo-img-wrapper">
-                    <Link to="/home">
-                        <motion.img
-                            whileHover={{ scale: 1.1 }}
-                            transition={transition}
-                            exit={{ scale: 1 }}
-                            src={BatLogo} alt="batman logo in sky" />
-                    </Link>
-                </div>
-                <motion.div 
-                exit={{opacity:0}}
-                transition={transition}
-                className="img-name">ra's al gul</motion.div>
-                <motion.div 
-                exit={{opacity:0}}
-                transition={transition}
-                className="date">2023</motion.div>
+                    <div className="logo-img-wrapper">
+                        <Link to="/home">
+                            <motion.img
+                                whileHover={{ scale: 1.1 }}
+                                transition={transition}
+                                exit={{ scale: 1 }}
+                                src={BatLogo} alt="batman logo in sky" />
+                        </Link>
+                    </div>
+                <motion.div
+                    exit={{ opacity: 0 }}
+                    transition={transition}
+                    className="img-name">ra's al gul</motion.div>
+                <motion.div
+                    exit={{ opacity: 0 }}
+                    transition={transition}
+                    className="date">2023</motion.div>
             </div>
         </div>
     );

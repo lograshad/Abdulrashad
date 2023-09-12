@@ -19,7 +19,8 @@ function App() {
   const lenis = new Lenis();
 
 lenis.on('scroll', (e) => {
-  console.log(e)
+  // console.log(e)
+  // maybe set duration and easing
 })
 
 function raf(time) {
@@ -29,7 +30,7 @@ function raf(time) {
 
 requestAnimationFrame(raf);
   return (
-    <div>
+    <div id='main-container'>
       <Cursor />
       <AnimatePresence
         // initial={false}
