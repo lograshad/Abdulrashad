@@ -37,7 +37,6 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
             techs: "HTML5 / CSS3 / Javascript",
         },
     ]
-    const triggerRef = useRef(null);
     const portRef = useRef(null);
     const horizontalStn = useRef(null);
     const pin = useRef(null);
@@ -61,13 +60,14 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
         const pinAnimation = gsap.fromTo(horizontalStn.current, {
             translateX: 0
         }, {
-            translateX: `-${translateX} * 5`,
+            translateX: `-65%`,
             ease: "none",
             duration: "1",
             delay: 1,
             scrollTrigger: {
-                trigger: triggerRef.current,
+                trigger: horizontalStn.current,
                 start: "top top",
+                // end: `${window.innerWidth} top`,
                 end: `${window.innerWidth} top`,
                 scrub: 0.5,
                 pin: true,
@@ -100,13 +100,17 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
         setActiveImage(index + 1);
     };
     const [selectedItem, setSelectedItem] = useState(null);
+    const [translateExit, setTranslateExit] = useState('-2%');
+    console.log(translateExit);
     function scrollToElement(elementId) {
         const element = document.getElementById(elementId);
-        const elementRect = element.getBoundingClientRect();
-        if (element) {
-            const leftOffset = elementRect.left + window.scrollX;
-            console.log(leftOffset);
-// ther's a solution here
+        console.log(element.id);
+        if (element.id == 2) {
+            setTranslateExit('-32%');
+        } else if (element.id == 3) {
+            setTranslateExit('-62%');
+        } else {
+            setTranslateExit('-2%');
         }
     }
 
@@ -137,28 +141,26 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
                 <span></span>
                 <div className="length">3</div>
             </motion.div>
-            <div ref={triggerRef}>
-                <motion.div className="horizontal-wrapper" ref={horizontalStn}
-                    exit={{
-                        // transform: 'translateX(0)',
-                    }}
-                    transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96], delay: .6 }}
-                >
-                    {gallery.map((item, index) => (
-                        <Gallery
-                            key={item.id}
-                            index={index}
-                            item={item}
-                            updateActiveImage={handleUpdateActiveImage}
-                            updateCurse={updateCurse}
-                            updateLeave={updateLeave}
-                            killScroll={killScroll}
-                            onItemClick={onItemClick}
-                            selectedItem={selectedItem}
-                        />
-                    ))}
-                </motion.div>
-            </div>
+            <motion.div className="horizontal-wrapper" ref={horizontalStn}
+                exit={{
+                    transform: `translateX(${translateExit})`,
+                }}
+                transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96], delay: .6 }}
+            >
+                {gallery.map((item, index) => (
+                    <Gallery
+                        key={item.id}
+                        index={index}
+                        item={item}
+                        updateActiveImage={handleUpdateActiveImage}
+                        updateCurse={updateCurse}
+                        updateLeave={updateLeave}
+                        killScroll={killScroll}
+                        onItemClick={onItemClick}
+                        selectedItem={selectedItem}
+                    />
+                ))}
+            </motion.div>
         </motion.div>
     );
 }
