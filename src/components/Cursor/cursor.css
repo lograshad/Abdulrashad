@@ -11,11 +11,11 @@
     z-index: 99;
     transform: translateX(-50%);
     opacity: 0%;
-    margin-top: -10px;
+    margin-top: -3%;
 }
 .lin {
-    width: 35px;
-    height: 35px;
+    width: 15px;
+    height: 15px;
     /* opacity: 60% !important; */
     z-index: 99;
     /* transition: 0.2s;
@@ -24,12 +24,13 @@
     transform: translateX(-50%);
     pointer-events: none;
     position: absolute;
+    mix-blend-mode: difference;
     border-radius: 50%;
-    background-color: hsl(169, 51%, 18%, 50%);
+    background-color: rgb(186, 186, 186);
 }
 
-/* @media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .cursor, .lin {
         display: none;
     }
-} */
+}

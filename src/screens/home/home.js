@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import SplitText from "../../utilities/SplitText.min.js";
 import Portfolio from "../../components/Portfolio/portfolio";
 import Contact from "../../components/ContactMe/contact";
+import NavBar from "../../components/NavBar/navbar";
 
 const Home = () => {
     let tl = gsap.timeline();
@@ -82,11 +83,13 @@ const Home = () => {
                     scrub: true,
                 }
             });
-    });
+    }, [tl]);
     return (
         <div className="home-page">
             <div className="my-name">Abdulrasheed Ìyàndá</div>
             <div className="year">2023 portfolio.</div>
+            <NavBar
+            />
             {content ? (
                 <div className="normal-content">
                     <div className="title-stn">
@@ -111,8 +114,10 @@ const Home = () => {
                         {/* change This */}
                         I'm a Front End developer, focused on delighting clients with innovative, user-friendly designs. I use my knowledge and abilities to support forward thinking development teams, and in my downtime I protect the city of gotham.
                     </div>
-                    <Portfolio />
-                    <Contact />
+                    <Portfolio
+                    />
+                    <Contact
+                    />
                 </div>
             ) : (
                 <div className="middle-content">

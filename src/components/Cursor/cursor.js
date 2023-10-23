@@ -1,9 +1,11 @@
 import "./cursor.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import { useLocation } from "react-router-dom";
+import StateContext from '../../StateContext';
 
-const Cursor = ({curse}) => {
+const Cursor = () => {
     const cursor = useRef();
+    const { curse } = useContext(StateContext);
     const location = useLocation();
 useEffect(()=> {
     window.addEventListener('mousemove', (e) => {
