@@ -2,21 +2,22 @@
     position: relative;
     background-color: rgb(186, 186, 186, 0);
     overflow: hidden;
+    box-sizing: border-box;
 }
 .horizontal-wrapper {
-    /* width: 300vw; */
+    width: fit-content;
     height: 100vh;
     display: flex;
     flex-wrap: nowrap;
-    padding: 15vh 300px;
+    padding: 15vh 22vw;
     gap: 25vw;
 }
 .gallery-item-container {
     height: 70vh;
+    width: 60vw;
     aspect-ratio: 16/9;
     position: relative;
     will-change: transform;
-    /* border: 10px solid red; */
 }
 .portfolio-container .is-reveal .img-wrapper {
     transform: scale(1);
