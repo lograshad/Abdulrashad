@@ -29,3 +29,7 @@ reportWebVitals();
 // todos
 // lazy loading counter
 // 404 page
+// on mobile view move background thingy
+// scroll down indication in hero section
+// 766px for mobile view
+// use onSceen hook for about me.

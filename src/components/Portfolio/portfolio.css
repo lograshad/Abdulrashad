@@ -4,21 +4,19 @@
     overflow: hidden;
 }
 .horizontal-wrapper {
-    width: 300vw;
+    /* width: 300vw; */
     height: 100vh;
     display: flex;
     flex-wrap: nowrap;
-    padding: 15vh 15vw;
-    padding-left: 30vw;
-    width: 300%;
-    gap: 40vw;
+    padding: 15vh 300px;
+    gap: 25vw;
 }
 .gallery-item-container {
     height: 70vh;
-    /* width: 70vw; */
     aspect-ratio: 16/9;
     position: relative;
     will-change: transform;
+    /* border: 10px solid red; */
 }
 .portfolio-container .is-reveal .img-wrapper {
     transform: scale(1);
@@ -30,7 +28,15 @@
     will-change: transform;
     transform: scale(0.7);
     transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transform-origin: center;
     filter: grayscale(100%) sepia(20%) brightness(80%);
+}
+.gallery-item-container .hidden {
+    visibility: hidden;
+    display: none;
+}
+.gallery-item-container .visible {
+    visibility: visible;
 }
 .gallery-item-container .img-wrapper img {
     height: 100%;
@@ -38,7 +44,7 @@
     mix-blend-mode: difference;
 }
 .description {
-    line-height: 7vw;
+    line-height: 5.5vw;
     position: absolute;
     bottom: 10%;
     left: -10%;
@@ -47,7 +53,7 @@
 }
 .title {
     font-family: var(--secondary-font);
-    font-size: 7vw;
+    font-size: 5vw;
     text-transform: capitalize;
     font-weight: 800;
     color: black;
@@ -55,7 +61,7 @@
 }
 .desc {
     font-family: 'Bodoni Moda', serif;
-    font-size: 7vw;
+    font-size: 5vw;
     text-transform: capitalize;
     font-weight: 600;
     color: transparent;
@@ -102,4 +108,34 @@
     height: 2px;
     background-color: black;
     margin-bottom: 7px;
+}
+.arrow-link-wrapper {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    right: 0%;
+}
+.arrow-link-primary-wrapper {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+/* .arrow-link-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    border: 1px solid black;
+} */
+.arrow-link-wrapper i {
+    font-size: 5vw;
+    color: rgb(0, 0, 0, .8);
 }

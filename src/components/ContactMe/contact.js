@@ -49,6 +49,16 @@ const Contact = () => {
             });
         }
     }, [reveal]);
+    const arrowRef = useRef(null);
+    const animate = () => {
+        gsap.fromTo(arrowRef.current, {
+            x: "0%",
+        }, {
+            x: "50%",
+            ease: "elastic.out(1, 0.4)",
+            duration: 0.7,
+        })
+    }
     return (
         <div className="contact-stn">
             <div className="hello">hello!</div>
@@ -57,6 +67,15 @@ const Contact = () => {
                 <div id='split-text2' ref={ref}>me</div>
                 <div className="gif-wrapper">
                     <img src={gif} alt="" />
+                </div>
+                <div className="contact-phrase">
+                    "Justice never sleeps"
+                </div>
+                <div className="arrow-link-primary-wrapper">
+                    <div className="arrow-link-wrapper" ref={arrowRef} onMouseEnter={animate}>
+                        <i className='bx bx-arrow-back bx-rotate-180' ></i>
+                        <i className='bx bx-arrow-back bx-rotate-180' ></i>
+                    </div>
                 </div>
             </div>
         </div>
