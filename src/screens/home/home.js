@@ -90,7 +90,18 @@ const Home = () => {
             <div className="year">2023 portfolio.</div>
             <NavBar
             />
-            {content ? (
+            {!content ? (
+                <div className="middle-content">
+                    <div className="logo-img-wrapper">
+                        <img
+                            src={BatLogo} alt="batman logo in sky" />
+                    </div>
+                    <div
+                        className="img-name">ra's al gul</div>
+                    <div
+                        className="date">2023</div>
+                </div>
+            ) : (
                 <div className="normal-content">
                     <div className="title-stn">
                         <div className="line-1" id='split-text'>
@@ -118,17 +129,6 @@ const Home = () => {
                     />
                     <Contact
                     />
-                </div>
-            ) : (
-                <div className="middle-content">
-                    <div className="logo-img-wrapper">
-                        <img
-                            src={BatLogo} alt="batman logo in sky" />
-                    </div>
-                    <div
-                        className="img-name">ra's al gul</div>
-                    <div
-                        className="date">2023</div>
                 </div>
             )}
         </div>

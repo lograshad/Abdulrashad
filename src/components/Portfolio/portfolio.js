@@ -21,6 +21,11 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
             title: "Zee's Blog",
             description: "Lifestyle Blog",
             techs: "Reactjs / GSAP",
+            body: {
+                projectFeatures: "",
+                projectStory: "",
+                techTalk: "",
+            }
         },
         {
             id: 2,
@@ -28,6 +33,11 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
             title: "BITSHUB",
             description: "Online Marketplace",
             techs: "Reactjs / Redux / Tailwind",
+            body: {
+                projectFeatures: "",
+                projectStory: "",
+                techTalk: "",
+            }
         },
         {
             id: 3,
@@ -35,6 +45,11 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
             title: "Toheeb Oladeinde",
             description: "Personal Portfolio",
             techs: "HTML5 / CSS3 / Javascript",
+            body: {
+                projectFeatures: "",
+                projectStory: "",
+                techTalk: "",
+            }
         },
     ]
     const portRef = useRef(null);
@@ -100,17 +115,16 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
         setActiveImage(index + 1);
     };
     const [selectedItem, setSelectedItem] = useState(null);
-    const [translateExit, setTranslateExit] = useState('-2%');
-    console.log(translateExit);
+    const [translateExit, setTranslateExit] = useState('-0.75%');
     function scrollToElement(elementId) {
         const element = document.getElementById(elementId);
         console.log(element.id);
         if (element.id == 2) {
-            setTranslateExit('-32%');
+            setTranslateExit('-31.75%');
         } else if (element.id == 3) {
-            setTranslateExit('-62%');
+            setTranslateExit('-62.78%');
         } else {
-            setTranslateExit('-2%');
+            setTranslateExit('-0.75%');
         }
     }
 

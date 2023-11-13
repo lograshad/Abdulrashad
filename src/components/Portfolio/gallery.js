@@ -3,7 +3,7 @@ import cn from "classnames";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Gallery = ({
     item,
@@ -36,6 +36,10 @@ const Gallery = ({
         })
     }
     const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }
+    const navigate = useNavigate();
+    const navigateToDetails = () => {
+        navigate('/batfolio', {state: {item}});
+    }
       
     return (
         <motion.div key={item.id} className={cn("gallery-item-container", { "is-reveal": onScreen })} ref={ref}
@@ -62,7 +66,7 @@ const Gallery = ({
                 }}
                 transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96], delay: 1 }}
             >
-                <motion.img src={item.imgSrc} alt="zee's blog"
+                <motion.img src={item.imgSrc} alt=""
                     exit={{
                         scale: .4
                     }}
@@ -83,15 +87,16 @@ const Gallery = ({
                 exit={{ opacity: 0 }}
                 transition={transition}
             >
-                <Link to='/batfolio' onClick={()=> {
+                <div id='arrow-pointer' onClick={()=> {
                     killScroll();
                     onItemClick(index, item.id);
+                    navigateToDetails();
                 }}>
                     <div className="arrow-link-wrapper" ref={arrowRef} onMouseEnter={animate}>
                         <i className='bx bx-arrow-back bx-rotate-180' ></i>
                         <i className='bx bx-arrow-back bx-rotate-180' ></i>
                     </div>
-                </Link>
+                </div>
             </motion.div>
         </motion.div>
     );
