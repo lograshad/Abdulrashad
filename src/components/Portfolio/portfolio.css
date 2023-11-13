@@ -140,3 +140,6 @@
     font-size: 5vw;
     color: rgb(0, 0, 0, .8);
 }
+#arrow-pointer{
+    cursor: pointer;
+}
