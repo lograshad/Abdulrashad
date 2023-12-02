@@ -35,3 +35,6 @@ reportWebVitals();
 // use onSceen hook for about me.
 // animate exit for all pages
 // add magnifier on scroll for portfolio details
+// add grain
+// front end developer too big
+// "IM BATMAN IN HIDDEN"
