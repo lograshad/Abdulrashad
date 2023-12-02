@@ -21,10 +21,19 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
             title: "Zee's Blog",
             description: "Lifestyle Blog",
             techs: "Reactjs / GSAP",
+            link: "https://zeesblog.com.ng",
             body: {
-                projectFeatures: "",
-                projectStory: "",
-                techTalk: "",
+                projectFeatures: [
+                    "Users can create accounts, log in, and secure their personal information.",
+                    "Admin can create and publish blog posts, sharing their thoughts and ideas with the community.",
+                    "Users can interact with blog posts by leaving comments, facilitating discussions and engagement.",
+                    "Users can express their appreciation for blog posts by liking them.",
+                    "GSAP animations are incorporated to provide an engaging and visually appealing user interface.",
+                    "Redux manages application state, ensuring data consistency and seamless user interactions.",
+                    "JavaScript is used to interact with external APIs, enabling dynamic content and real-time updates.",
+                    "The web app is designed to be fully responsive, ensuring a great user experience on various devices.",
+                ],
+                projectStory: "Led a dynamic team to bring to life a vibrant blog website capturing the essence of navigating the tumultuous journey of one's twenties. Collaborating seamlessly with a skilled backend engineer, a creative UI/UX designer, and a talented content writer, we crafted an immersive digital space that resonates with the lived experiences, challenges, and triumphs of those navigating the thrilling and transformative path of being a 20-something. The fusion of technical expertise, innovative design, and compelling content resulted in a platform that not only engages but also connects with a diverse audience on the intricacies of this pivotal life stage.",
             }
         },
         {
@@ -33,10 +42,18 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
             title: "BITSHUB",
             description: "Online Marketplace",
             techs: "Reactjs / Redux / Tailwind",
+            link: "https://bitshub-frontend-eta.vercel.app/",
             body: {
-                projectFeatures: "",
-                projectStory: "",
-                techTalk: "",
+                projectFeatures: [
+                    "Users can create accounts, log in, and secure their personal information.",
+                    "Vendors can create stores and post their merchadise, showcasing their products and their prices",
+                    "Users can interact with different products like adding an item to cart, adding an item to 'favourites', track an ordered item and so much more.",
+                    "Tailwind CSS is incorporated to provide an engaging and visually appealing user interface.",
+                    "Redux manages application state, ensuring data consistency and seamless user interactions.",
+                    "JavaScript is used to interact with external APIs, enabling dynamic content and real-time updates.",
+                    "The web app is designed to be fully responsive, ensuring a great user experience on various devices.",
+                ],
+                projectStory: "Joining a dynamic startup, I played a key role in a cross-functional team that included both frontend and backend developers—an IT squad. Our collective mission was to develop a cutting-edge eCommerce marketplace specifically designed for gadgets. With a focus on user experience and seamless functionality, we aimed to create an online space that caters to the needs and passions of gadget enthusiasts. It was an exciting journey, collaborating with diverse talents to bring this innovative platform to life in the ever-evolving landscape of digital commerce.",
             }
         },
         {
@@ -45,10 +62,13 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
             title: "Toheeb Oladeinde",
             description: "Personal Portfolio",
             techs: "HTML5 / CSS3 / Javascript",
+            link: "https://toheeboladeinde.xyz/",
             body: {
-                projectFeatures: "",
-                projectStory: "",
-                techTalk: "",
+                projectFeatures: [
+                    "I revamped the website's cross-browser compatibility to ensure a consistent user experience across all browsers.",
+                    "Built the website with HTML5, CSS3 and JavaScript, facilitating smooth animations for nice user experience, responsiveness and interaction."
+                ],
+                projectStory: "Crafted a captivating portfolio website that showcases the diverse talents of a visionary creative writer and accomplished content strategist. From innovative design to compelling content, the platform reflects the multifaceted brilliance of a creative mind and a strategic storyteller, offering visitors an immersive experience into the world of words and strategic narratives.",
             }
         },
     ]

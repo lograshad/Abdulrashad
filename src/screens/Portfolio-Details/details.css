@@ -1,34 +1,12 @@
-/* .portolio-details-page {
-    position: relative;
-}
-.middle-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.middle-container .portfolio-image-wrapper {
-    overflow: hidden;
-    scale: .4;
-    height: 70vh;
-    width: 60vw;
-    aspect-ratio: 16/9;
-}
-.portfolio-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    filter: grayscale(100%) sepia(20%) brightness(80%);
-} */
 
 .portfolio-details-page {
     position: relative;
     font-size: 36px;
-    height: 100vh;
 }
 .portfolio-details-page .caption-text {
     padding-top: 30vh;
     display: flex;
-    width: 45vw;
+    width: 55vw;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
@@ -44,23 +22,118 @@
     text-align: center;
 }
 .portfolio-header-image-container {
-    overflow: hidden;
-    /* width: 100%;
-    height: 45vh; */
+    /* overflow: hidden; */
+    /* width: 100%; */
+    /* height: 25vh; */
     position: relative;
+    filter: grayscale(100%) sepia(20%) brightness(80%);
 }
 .portfolio-header-image-container .portfolio-header-image-thumbnail {
     /* width: 100%; */
     margin: 0 auto;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* position: absolute; */
     /* left: 0;
     right: 0; */
 }
-.portfolio-header-image-container .portfolio-header-image-wrapper {
-    
+
+.portfolio-title .titles {
+    overflow: hidden;
 }
-.portfolio-header-image-container .portfolio-header-image-wrapper img {
-    /* width: 100%; */
-    /* position: absolute; */
+.portfolio-title .titles .first span,
+.portfolio-title .titles .last span {
+    display: inline-block;
+    position: relative;
+}
+.portfolio-title .titles .first {
+    margin-right: .3em;
+}
+.portfolio-title .titles .first2 {
+    margin-right: 0;
+}
+.portfolio-details-page .body {
+    color: var(--primary-font-color);
+    width: 75%;
+    margin: auto;
+    margin-top: 55vh;
+}
+.portfolio-details-page .body .title {
+    color: var(--primary-font-color);
+    font-family: 'Syncopate', sans-serif;
+    font-size: .35em;
+    width: 40%;
+}
+
+.portfolio-details-page .body .story-container,
+.portfolio-details-page .body .feature-container,
+.portfolio-details-page .body .techTalk-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10vh;
+}
+.portfolio-details-page .body .story-container .story,
+.portfolio-details-page .body .feature-container .feature,
+.portfolio-details-page .body .techTalk-container .techTalk {
+    font-size: .38em;
+    width: 50%;
+    line-height: 170%;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.portfolio-details-page .body .feature-container {
+    flex-direction: row-reverse;
+    margin-top: 30vh;
+}
+.portfolio-details-page .body .feature-container .title {
+    justify-self: flex-end;
+    width: fit-content;
+}
+.portfolio-details-page .body .feature-container .feature {
+    padding-left: 0;
+}
+.portfolio-details-page .body .feature-container .feature li {
+    margin-bottom: .3em;
+}
+.portfolio-details-page .live-link {
+    width: 30vw;
+    position: absolute;
+    bottom: -1%;
+    right: 5%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: .3em;
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    padding: .7em 0em;
+    border-bottom: 1px solid #bababa;
+    transition: 200ms ease-in-out;
+}
+.portfolio-details-page .live-link:hover {
+    color: black;
+    padding: .7em;
+    transition: 200ms ease-in-out;
+}
+.portfolio-details-page .live-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    background-color: #bababa;
+    z-index: -1;
+    transition: 200ms ease-in-out;
+}
+.portfolio-details-page .live-link:hover::before {
+    transform: scaleY(1);
+    transition: 200ms ease-in-out;
+}
+.portfolio-details-page .live-link i {
+    font-size: 2em;
+    transform: rotateZ(135deg);
 }
