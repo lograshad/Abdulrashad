@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from 'react';
 import StateContext from '../../StateContext';
+import "./navbar.css";
 
 const NavBar = () => {
     const { curse, setCurse } = useContext(StateContext);
@@ -13,9 +14,9 @@ const NavBar = () => {
     return ( 
         <div className="navbar-container">
             <ul onMouseOver={updateCurse} onMouseLeave={updateLeave} onClick={updateLeave}>
-                <li><Link>behind the mask</Link></li>
-                <li><Link>batfolio</Link></li>
-                <li><Link>contact me</Link></li>
+                <li><Link to='/about_me'>behind the mask</Link></li>
+                <li><a href="/#portfolio">batfolio</a></li>
+                <li><a href="/#contact">contact me</a></li>
             </ul>
         </div>
      );

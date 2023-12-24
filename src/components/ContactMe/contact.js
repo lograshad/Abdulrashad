@@ -61,7 +61,7 @@ const Contact = () => {
     }
     return (
         <div className="contact-stn">
-            <div className="hello">hello!</div>
+            <div className="hello" id='contact'>hello!</div>
             <div className={cn("bod", { 'is-reveal': reveal })}>
                 <div id='split-text'>contact</div>
                 <div id='split-text2' ref={ref}>me</div>

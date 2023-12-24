@@ -24,7 +24,6 @@ reportWebVitals();
 
 // side notes
 // justice never sleeps
-// enter into the awesomeness of ra'as aghul
 
 // todos
 // lazy loading counter
@@ -38,3 +37,5 @@ reportWebVitals();
 // add grain
 // front end developer too big
 // "IM BATMAN IN HIDDEN"
+// contact form
+// set the form depending on the location

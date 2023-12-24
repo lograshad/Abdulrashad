@@ -1,7 +1,18 @@
-
 .portfolio-details-page {
     position: relative;
     font-size: 36px;
+}
+.portfolio-details-page .back-btn {
+    position: fixed;
+    font-size: .4em;
+    font-weight: 700;
+    top: 10%;
+    left: 10%;
+}
+.portfolio-details-page .back-btn a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 .portfolio-details-page .caption-text {
     padding-top: 30vh;

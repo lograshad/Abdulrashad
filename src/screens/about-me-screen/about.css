@@ -1,0 +1,46 @@
+.about-me-container .content{
+    font-size: 32px;
+    padding: 0 10vw;
+}
+.about-me-container .my-name {
+    position: absolute;
+    top: 5vh;
+    left: 10%;
+    font-size: 10px;
+    font-weight: 700;
+    opacity: 1;
+    text-transform: uppercase;
+}
+.about-me-container .year {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.about-me-container .pre-header {
+    margin-top: 30vh;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: rgb(186, 186, 186, 0.7);
+    font-size: .4em;
+}
+.about-me-container .header {
+    text-align: center;
+    font-size: .95em;
+    font-weight: 600;
+    margin-top: .9em;
+    line-height: 120%;
+}
+.about-me-container .preamble{
+    text-align: center;
+    color: rgb(186, 186, 186, 0.7);
+    font-size: .45em;
+    font-weight: 600;
+    margin-top: 2.2em;
+    padding: 0 10vw;
+    line-height: 150%;
+}

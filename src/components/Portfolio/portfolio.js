@@ -160,6 +160,7 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
     return (
         <motion.div
             className="portfolio-container"
+            id='portfolio'
             ref={portRef}
             exit={{
                 backgroundColor: 'rgb(0, 0, 0)',
