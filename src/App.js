@@ -2,12 +2,12 @@ import './App.css';
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from './screens/home/home';
 import { AnimatePresence } from 'framer-motion';
-import Preloader from './components/preloader/preloader';
 import { useState } from 'react';
 import Cursor from './components/Cursor/cursor';
 import StateProvider from './StateProvider';
 import Lenis from '@studio-freight/lenis';
 import Details from './screens/Portfolio-Details/details';
+import AboutMe from './screens/about-me-screen/about';
 
 function App() {
   const location = useLocation();
@@ -41,23 +41,24 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route
               exact
-              path="/home"
+              path="/"
+              index
               element={
                 <Home />
               }
             />
             <Route
               exact
-              path="/"
+              path="/batfolio"
               element={
-                <Preloader />
+                <Details />
               }
             />
             <Route
               exact
-              path="/batfolio"
+              path="/about_me"
               element={
-                <Details/>
+                <AboutMe/>
               }
             />
             {/* <Route path="*" element={<NotFound />} /> 404 PAGE */}

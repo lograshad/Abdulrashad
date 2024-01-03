@@ -1,8 +1,9 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./details.css";
 import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+
 // import 'boxicons';
 
 
@@ -56,7 +57,26 @@ const Details = () => {
                 height: "max-content",
                 transition: { delay: 1.5, ...transition },
             }}
+            exit={{
+                opacity: 0,
+                transition: {
+                    duration: .3,
+                    ease: [0.6, 0.01, 0.05, 0.9],
+                }
+            }}
             className="portfolio-details-page">
+            <motion.div
+            initial={{
+                opacity: 0,
+            }}
+            animate={{
+                opacity: 1,
+                transition: {
+                    delay: 2,
+                    duration: .7,
+                }
+            }}
+             className="back-btn"><Link to="/">BACK</Link></motion.div>
             <motion.div
                 initial={{
                     opacity: 0
@@ -440,10 +460,21 @@ const Details = () => {
                         ))
                     }</ul>
                 </div>
-                <a href={detail.link} target="_blank" className="live-link">
+                <motion.a 
+                initial={{
+                    display: "none",
+                }}
+                animate={{
+                    display: "flex",
+                    transition: {
+                        delay: 3.05,
+                        duration: .1,
+                    }
+                }}
+                href={detail.link} target="_blank" className="live-link">
                     <span>Check it Out</span>
                     <i className='bx bx-arrow-back'></i>
-                </a>
+                </motion.a>
             </motion.div>
         </motion.div >
     );
