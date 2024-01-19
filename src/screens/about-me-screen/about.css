@@ -44,3 +44,39 @@
     padding: 0 10vw;
     line-height: 150%;
 }
+.about-me-container .servicesNskills {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2.5em;
+}
+.about-me-container .servicesNskills .title {
+    color: rgb(186, 186, 186, 0.7);
+    text-transform: uppercase;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: .4em;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+/* .about-me-container .servicesNskills .services-container {
+    background-color: red;
+}
+.about-me-container .servicesNskills .skills-container {
+    background-color: blue;
+} */
+.about-me-container .servicesNskills .items {
+    font-size: .5em;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+    width: 30em;
+    word-spacing: 10px;
+    margin-top: .8em;
+    line-height: 150%;
+    margin-bottom: 2em;
+}
+.about-me-container .servicesNskills .items span {
+    color: rgb(186, 186, 186, 0.5);
+    font-weight: 600;
+}

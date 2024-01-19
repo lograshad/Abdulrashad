@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 import cn from "classnames";
 import SplitText from "../../utilities/SplitText.min.js";
 import useOnScreen from '../../utilities/useOnScreen';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
     const ref = useRef(null);
@@ -71,12 +72,12 @@ const Contact = () => {
                 <div className="contact-phrase">
                     "Justice never sleeps"
                 </div>
-                <div className="arrow-link-primary-wrapper">
+                <a href="mailto:akintola.rd@gmail.com" className="arrow-link-primary-wrapper">
                     <div className="arrow-link-wrapper" ref={arrowRef} onMouseEnter={animate}>
                         <i className='bx bx-arrow-back bx-rotate-180' ></i>
                         <i className='bx bx-arrow-back bx-rotate-180' ></i>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     );

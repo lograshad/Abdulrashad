@@ -1,3 +1,4 @@
+import Contact from "../../components/ContactMe/contact";
 import NavBar from "../../components/NavBar/navbar";
 import "./about.css";
 import { motion } from "framer-motion";
@@ -64,7 +65,22 @@ const AboutMe = () => {
                     className="preamble">
                     Over the past three years I have collaborated with several clients in and out of africa, rising startups and an IT Company, as a frontend developer, working solo and also leading small development teams. And when the code takes a breather you can find me drawing, playing football or protecting the city of gotham.
                 </motion.div>
+                <section className="servicesNskills">
+                    <div className="services-container">
+                        <div className="title">Services</div>
+                        <div className="items">
+                            Web Development <span>/</span> Mobile Development <span>/</span> Superhero for Hire
+                        </div>
+                    </div>
+                    <div className="skills-container">
+                        <div className="title">Skills and Tools</div>
+                        <div className="items">
+                            JavaScript <span>/</span> React <span>/</span> React-Native <span>/</span> Git <span>/</span> JSX <span>/</span> GSAP <span>/</span> Framer-Motion <span>/</span> CSS3 <span>/</span> Bootstrap <span>/</span> Tailwind <span>/</span> Ninjutsu <span>/</span> Batmobile
+                        </div>
+                    </div>
+                </section>
             </motion.div>
+            <Contact/>
         </div>
     );
 }

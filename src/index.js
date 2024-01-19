@@ -22,20 +22,13 @@ root.render(
 reportWebVitals();
 
 
-// side notes
-// justice never sleeps
 
 // todos
-// lazy loading counter
 // 404 page
 // on mobile view move background thingy
 // scroll down indication in hero section
 // 766px for mobile view
 // use onSceen hook for about me.
-// animate exit for all pages
 // add magnifier on scroll for portfolio details
-// add grain
-// front end developer too big
-// "IM BATMAN IN HIDDEN"
 // contact form
 // set the form depending on the location

@@ -2,6 +2,8 @@ import './portfolio.css';
 import zeesblogImg from "../../images/zee.jpeg";
 import tPortfolioImg from "../../images/tee.jpeg";
 import bitshubImg from "../../images/bitshubGirl.jpeg";
+import toluImg from "../../images/tolu.png";
+import clinicImg from "../../images/meb-eye-clinic.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
@@ -58,6 +60,39 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
         },
         {
             id: 3,
+            imgSrc: clinicImg,
+            title: "MEB-EYE Clinic",
+            description: "Family Eye Clinic",
+            techs: "Reactjs / CSS3",
+            link: "https://meb-eye-clinic.netlify.app/",
+            body: {
+                projectFeatures: [
+                    "Implemented a responsive design approach, optimizing the website for various devices and screen sizes to accommodate users on smartphones, tablets, and desktops.",
+                    "Collaborated with the clinic team to gather requirements and implemented personalized content reflecting the clinic's services and values.",
+                    "Customized features tailored to the needs of a family clinic, ensuring user-friendly navigation and accessibility for patients.",
+                    "Implemented SEO optimization strategies to enhance the website's visibility and performance on search engines.",
+                    "Upgraded cross-browser compatibility for a consistent user experience on various platforms.",
+                ],
+                projectStory: "Crafted a welcoming online hub for the Family Eye Clinic, where patients can seamlessly explore their services. Scroll through a user-friendly interface to discover essential information about eye care, services offered, and our dedicated team. Dive into the website—it's designed to be informative, accessible, and tailored to make your experience with us as clear as possible.",
+            }
+        },
+        {
+            id: 4,
+            imgSrc: toluImg,
+            title: "Tolu",
+            description: "Personal Portfolio",
+            techs: "Reactjs / Framer Motion",
+            link: "https://toludev.netlify.app/",
+            body: {
+                projectFeatures: [
+                    "I revamped the website's cross-browser compatibility to ensure a consistent user experience across all browsers.",
+                    "Built the website with Reactjs, CSS3 and framer motion, facilitating smooth animations and page transitions for nice user experience, responsiveness and interaction."
+                ],
+                projectStory: "Built a cool portfolio showcasing Tolu's mobile development adventures. Swipe through some awesome apps and get a glimpse of the code behind the scenes. Dive into the world of mobile tech with me—it's simple, fun, and all about making cool stuff for your phone!",
+            }
+        },
+        {
+            id: 5,
             imgSrc: tPortfolioImg,
             title: "Toheeb Oladeinde",
             description: "Personal Portfolio",
@@ -95,7 +130,7 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
         const pinAnimation = gsap.fromTo(horizontalStn.current, {
             translateX: 0
         }, {
-            translateX: `-65%`,
+            translateX: `-78%`,
             ease: "none",
             duration: "1",
             delay: 1,
@@ -140,11 +175,15 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
         const element = document.getElementById(elementId);
         console.log(element.id);
         if (element.id == 2) {
-            setTranslateExit('-31.75%');
+            setTranslateExit('-19.60%');
         } else if (element.id == 3) {
-            setTranslateExit('-62.78%');
+            setTranslateExit('-38.75%');
+        }  else if (element.id == 4) {
+            setTranslateExit('-57.9%');
+        } else if (element.id == 5) {
+            setTranslateExit('-77.05%');
         } else {
-            setTranslateExit('-0.75%');
+            setTranslateExit('-0.45%');
         }
     }
 

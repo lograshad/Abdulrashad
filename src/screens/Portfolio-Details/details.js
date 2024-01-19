@@ -66,17 +66,17 @@ const Details = () => {
             }}
             className="portfolio-details-page">
             <motion.div
-            initial={{
-                opacity: 0,
-            }}
-            animate={{
-                opacity: 1,
-                transition: {
-                    delay: 2,
-                    duration: .7,
-                }
-            }}
-             className="back-btn"><Link to="/">BACK</Link></motion.div>
+                initial={{
+                    opacity: 0,
+                }}
+                animate={{
+                    opacity: 1,
+                    transition: {
+                        delay: 2,
+                        duration: .7,
+                    }
+                }}
+                className="back-btn"><Link to="/">BACK</Link></motion.div>
             <motion.div
                 initial={{
                     opacity: 0
@@ -177,6 +177,49 @@ const Details = () => {
                         >g</motion.span>
                     </motion.span>
                 </motion.div>
+            ) : detail.title === "Tolu" ? (
+                <div className="titles">
+                    <motion.span className="first first2">
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .95, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >T</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .9, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >O</motion.span>
+                    </motion.span>
+                    <motion.span variants={lastName} className="last">
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .9, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >L</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .95, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >U</motion.span>
+                    </motion.span>
+                </div>
             ) : detail.title === "BITSHUB" ? (
                 <div className="titles">
                     <motion.span className="first first2">
@@ -245,6 +288,130 @@ const Details = () => {
                                 transition: { delay: 1, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
                             }}
                         >b</motion.span>
+                    </motion.span>
+                </div>
+            ) : detail.title === "MEB-EYE Clinic" ? (
+                <div className="titles">
+                    <motion.span className="first">
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: 1.1, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >M</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: 1.05, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >E</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: 1, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >B</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .95, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >-</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .9, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >E</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .85, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >Y</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .82, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >E</motion.span>
+                    </motion.span>
+                    <motion.span variants={lastName} className="last">
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .82, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >C</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .86, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >l</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .9, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >i</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .94, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >n</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: .98, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >i</motion.span>
+                        <motion.span
+                            initial={{
+                                y: 400
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { delay: 1.02, duration: .6, ease: [0.6, 0.01, 0.1, 0.9] }
+                            }}
+                        >c</motion.span>
                     </motion.span>
                 </div>
             ) : (
@@ -437,16 +604,16 @@ const Details = () => {
                 </div>
             </motion.div>
             <motion.div className="body"
-            initial={{
-                display: "none",
-            }}
-            animate={{
-                display: "block",
-                transition: {
-                    delay: 1,
-                    duration: .1,
-                }
-            }}
+                initial={{
+                    display: "none",
+                }}
+                animate={{
+                    display: "block",
+                    transition: {
+                        delay: 1,
+                        duration: .1,
+                    }
+                }}
             >
                 <div className="story-container">
                     <div className="title">Project Insights</div>
@@ -460,18 +627,18 @@ const Details = () => {
                         ))
                     }</ul>
                 </div>
-                <motion.a 
-                initial={{
-                    display: "none",
-                }}
-                animate={{
-                    display: "flex",
-                    transition: {
-                        delay: 3.05,
-                        duration: .1,
-                    }
-                }}
-                href={detail.link} target="_blank" className="live-link">
+                <motion.a
+                    initial={{
+                        display: "none",
+                    }}
+                    animate={{
+                        display: "flex",
+                        transition: {
+                            delay: 3.05,
+                            duration: .1,
+                        }
+                    }}
+                    href={detail.link} target="_blank" className="live-link">
                     <span>Check it Out</span>
                     <i className='bx bx-arrow-back'></i>
                 </motion.a>
