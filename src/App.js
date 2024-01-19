@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from './screens/home/home';
 import { AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Cursor from './components/Cursor/cursor';
 import StateProvider from './StateProvider';
 import Lenis from '@studio-freight/lenis';
@@ -31,6 +31,9 @@ function App() {
   }
 
   requestAnimationFrame(raf);
+  useEffect(()=>{
+    window.scroll(0,0)
+  }, [location]);
   return (
     <StateProvider>
       <div id='main-container'>
