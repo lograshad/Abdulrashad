@@ -138,11 +138,20 @@ overflow: hidden;
     font-size: 5vw;
     font-family: var(--secondary-font);
     text-align: center;
-    line-height: 1em;
+    line-height: 100%;
     font-weight: 500;
     padding: 0 3rem;
     padding-bottom: 20vh;
-    transform: translateY(-20);
+    opacity: 1;
+}
+.lineChildren {
+    transform: translate(0, 100%);
+}
+.lineParent {
+    overflow: hidden;
+}
+.home-page .is-reveal {
+    opacity: 1;
 }
 
 /* navbar section */
@@ -163,4 +172,40 @@ overflow: hidden;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.mobile-screen-text {
+    display: none;
+}
+@media (max-width: 920px) {
+    .home-page {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-page .mobile-screen-text {
+        display: block;
+        font-size: 32px;
+        text-align: center;
+        font-weight: 700;
+        opacity: 0;
+        user-select: none;
+        padding: 0 5vw;
+        animation: anim 300ms 1600ms forwards;
+    }
+    .home-page .normal-content {
+        display: none;
+    }
+}
+
+@keyframes anim {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

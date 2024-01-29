@@ -213,7 +213,7 @@ const Portfolio = ({ src, index, columnOffset, updateCurse, updateLeave }) => {
             >
                 <div className="current-index">{activeImage}</div>
                 <span></span>
-                <div className="length">3</div>
+                <div className="length">5</div>
             </motion.div>
             <motion.div className="horizontal-wrapper" ref={horizontalStn}
                 exit={{

@@ -2,18 +2,29 @@ import { motion } from "framer-motion";
 // import { Link } from "react-router-dom";
 import BatLogo from "../../Gifs/batmanlogosky.gif";
 import "./home.css";
-import { gsap } from "gsap";
+import  gsap  from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import Portfolio from "../../components/Portfolio/portfolio";
 import Contact from "../../components/ContactMe/contact";
 import NavBar from "../../components/NavBar/navbar";
 
+import cn from "classnames";
+import SplitText from "../../utilities/SplitText.min.js";
+import useOnScreen from '../../utilities/useOnScreen';
+
 const Home = () => {
     let tl = gsap.timeline();
     const aboutRef = useRef(null);
     gsap.registerPlugin(ScrollTrigger);
     const [content, showContent] = useState(false);
+
+    const [reveal, setReveal] = useState(false);
+    const ref = useRef(null);
+    const onScreen = useOnScreen(ref);
+    useEffect(() => {
+        if (onScreen) setReveal(true);
+    }, [onScreen])
 
     useEffect(() => {
         tl.to(".logo-img-wrapper", {
@@ -22,8 +33,42 @@ const Home = () => {
             duration: 0.3,
             ease: "power4.out",
             onComplete: () => { showContent(true) },
-        })
-    }, [tl]);
+        });
+        if (reveal) {
+            const split = new SplitText("#split-text", {
+                type: "lines",
+                linesClass: "lineChildren"
+            });
+            const splitParent = new SplitText("#split-text", {
+                type: "lines",
+                linesClass: "lineParent"
+            });
+            gsap.to(split.lines, {
+                duration: .3,
+                y: 0,
+                opacity: 1,
+                // stagger: 0.2,
+                delay: 0.5,
+                ease: "power2",
+            });
+            const split2 = new SplitText("#split-text2", {
+                type: "lines",
+                linesClass: "lineChildren"
+            });
+            const splitParent2 = new SplitText("#split-text2", {
+                type: "lines",
+                linesClass: "lineParent"
+            });
+            gsap.to(split2.lines, {
+                duration: .3,
+                y: 0,
+                opacity: 1,
+                // stagger: 0.2,
+                delay: 0.5,
+                ease: "power2",
+            });
+        }
+    }, [tl, reveal]);
     return (
         <div className="home-page">
             <div className="my-name">Abdulrasheed Ìyàndá</div>
@@ -90,23 +135,28 @@ const Home = () => {
                         <div id='scroll'>scroll</div>
                         <div className="scroll-indicator"></div>
                     </motion.div>
-                    <motion.div
+                    <div
                         exit={{
                             opacity: 0,
                             transition: {
                                 duration: .3
                             }
                         }}
-                        className="about-body" id='split-text' ref={aboutRef}>
+                        className={cn("about-body", { 'is-reveal': reveal })}>
                         {/* change This */}
+                        <div id='split-text'>
                         I'm a Software developer, focused on delighting clients with innovative, user-friendly websites, web apps and mobile apps. I use my knowledge and abilities to support forward thinking development teams, and in my downtime I protect the city of gotham.
-                    </motion.div>
+                        </div>
+                    </div>
                     <Portfolio
                     />
                     <Contact
                     />
                 </motion.div>
             )}
+            <div className="mobile-screen-text">
+                The Wayne manor is under construction for this screen size.
+            </div>
         </div>
     );
 }

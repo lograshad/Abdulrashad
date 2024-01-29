@@ -80,3 +80,46 @@
     color: rgb(186, 186, 186, 0.5);
     font-weight: 600;
 }
+
+@media (max-width: 1260px) {
+    .about-me-container .content{
+        font-size: 24px;
+        padding: 0 10vw;
+    }
+}
+
+.mobile-screen-text {
+    display: none;
+}
+@media (max-width: 920px) {
+    .about-me-container {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-me-container .mobile-screen-text {
+        display: block;
+        font-size: 32px;
+        text-align: center;
+        font-weight: 700;
+        opacity: 0;
+        user-select: none;
+        padding: 0 5vw;
+        animation: anim 300ms 900ms forwards;
+    }
+    .about-me-container .content {
+        display: none;
+    }
+}
+
+@keyframes anim {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -81,3 +81,21 @@
     font-size: 5vw;
     color: rgb(186, 186, 186, .8);
 }
+
+@media (max-width: 1260px) {
+    .contact-stn .bod {
+        font-size: 166px;
+    }
+    .lineChildren {
+        line-height: 100%;
+    }
+    .gif-wrapper {
+        top: 15%;
+        left: 15%;
+    }
+}
+@media (max-width: 920px) {
+    .contact-stn  {
+        display: none;
+    }
+}

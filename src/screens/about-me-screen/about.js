@@ -81,6 +81,9 @@ const AboutMe = () => {
                 </section>
             </motion.div>
             <Contact/>
+            <div className="mobile-screen-text">
+                The Wayne manor is under construction for this screen size.
+            </div>
         </div>
     );
 }
